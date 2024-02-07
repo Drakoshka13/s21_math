@@ -27,8 +27,6 @@ test: s21_math.a s21_test.o
 	@./test
 clean:
 	@rm -rf *.o *.a test gcov_test *.gcno *.gcda *.dSYM *.info ./report s21_math_test.c
-check:
-	checkmk clean_mode=1 s21_math.check > s21_math_test.c
 
 gcov_report: gcov_test.info
 	@genhtml -o report/ gcov_test.info
